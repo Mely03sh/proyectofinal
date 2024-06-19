@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Motos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 100px;
+            /* Altura del navbar ajustada */
+        }
+
+        .navbar {
+            background-color: #FF0000;
+            padding-top: 1rem;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            /* Altura ajustada del carrusel */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card {
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            height: 150px;
+            /* tamaño imágenes de las tarjetas */
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #343a40;
+            /* Fondo negro */
+            color: #ffffff;
+            /* Texto blanco */
+            padding: 20px 0;
+            /* Espaciado interno superior e inferior */
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        /* Estilos para las imágenes debajo del carrusel */
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: 150px;
+            /* Ajuste del tamaño de las imágenes */
+            margin: 10px;
+            object-fit: contain;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-float i {
+            font-size: 24px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card-container .card {
+            margin: 10px;
+            flex: 1 1 calc(50% - 20px);
+            /* Ajuste de ancho para dos columnas con margen */
+        }
+
+        .offset-card {
+            margin-left: auto;
+        }
+
+        @media (max-width: 767px) {
+            .card-container .card {
+                flex: 1 1 100%;
+                /* Una columna en pantallas pequeñas */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 300px;
+                /* Altura ajustada del carrusel para pantallas más pequeñas */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-item img {
+                height: 200px;
+                /* Altura ajustada del carrusel para pantallas más pequeñas */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo/Moto_Repuestos__5_-removebg-preview.png" alt="Logo" style="height: 70px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-door-fill " style="color: #fff;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index10.html"><i class="bi bi-envelope" style="color:#f8f9fa"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index3.html" style="color: #ffffff">Marcas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-cart" style="color:#fff"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="Repuestos.html">Repuestos</a></li>
+                            <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
+                            <li><a class="dropdown-item" href="electricos.html">Electricos</a></li>
+                            <li><a class="dropdown-item" href="suspencion.html">Suspención</a></li>
+                            <li><a class="dropdown-item" href="transmision.html">Transmición</a></li>
+                            <li><a class="dropdown-item" href="Llantas.html">Llantas</a></li>
+                            <li><a class="dropdown-item" href="Lubricantes.html">Lubricantes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- <button class="btn btn-outline-light" id="TemaBtn" onclick="toggleMode()">Tema Claro</button> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrusel -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="pagina principal/oficina-de-moto.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="pagina principal/carrusel2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="pagina principal/carrusel3.webp" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Imágenes después del Carrusel -->
+    <div class="container mt-5">
+        <div class="row img-container">
+            <div class="col-6 col-md-2 mb-4">
+                <img src="akt/akt.png" class="img-fluid" alt="Imagen 1">
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="Yamaha/yama2.png" class="img-fluid" alt="Imagen 2">
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="bajaj/carrusel_bajaj.png" class="img-fluid" alt="Imagen 3">
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="suzuki/suzuki.png" class="img-fluid" alt="Imagen 4">
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="honda/honda o.png" class="img-fluid" alt="Imagen 5">
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="tvs/tvs portada.webp" class="img-fluid" alt="Imagen 6">
+            </div>
+        </div>
+    </div>
+    <p style="text-align: center; color:#fff;">"¡Explora Nuestra Gama Completa de Repuestos: Eléctricos, Suspensión y Más!"</p>
+
+    <!-- Tarjetas -->
+    <div class="container">
+        <div class="row card-container">
+            <div class="col-12 col-md-6 mb-3">
+                <div class="card h-100">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="akt/comando luces akt.webp" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: #000000;">Eléctricos</h5>
+                                <p class="card-text">El Comando de luces IZQ para AKT 125/AKT Sport GX MOTOR está hecho de plástico ABS resistente al calor y la humedad, con terminales que garantizan una conexión efectiva, asegurando su durabilidad y funcionamiento confiable a largo plazo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+                <div class="card h-100">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="akt/kit caucho.webp" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: #000000;">Transmisión</h5>
+                                <p class="card-text">El kit de caucho de campana porta sprocket de AKT CR5 Yahosuka mejora la durabilidad y estabilidad del sistema de transmisión, optimizando el rendimiento del arranque y aumentando el torque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 style="color:#fff">Contactenos</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt" style="color: #25d366;"></i> Dirección: 2a1 Cl. 18
+                            Sahagún, Córdoba</li>
+                        <li><i class="bi bi-phone" style="color: #6c757d;"></i> Teléfono: 3227898709</li>
+                        <a href="index10.html" class="text-decoration-none text-reset"> <li><i class="bi bi-envelope" style="color: #dc3545;"></i> Email: motopremium@gmail.com</li></a>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="color: #ffffff">Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="bi bi-facebook" style="color: blue;"></i> Facebook</a></li>
+                        <li><a href="#"><i class="bi bi-instagram" style="color:#FF70AB"></i> Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="color:#ffffff">Acerca de Nosotros</h5>
+                    <p style="color: #ffffff;">En Moto Repuestos Premium, nos dedicamos a ofrecer la mejor calidad en repuestos y accesorios para tu motocicleta. Nuestro compromiso es garantizar la satisfacción de nuestros clientes con productos confiables y un servicio excepcional.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Ícono flotante de WhatsApp -->
+    <a href="https://wa.me/3207945353" class="whatsapp-float" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+</body>
+
+</html>

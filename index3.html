@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Motos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 100px; /* Altura del navbar */
+        }
+
+        .navbar {
+            background-color: #FF0000; /* Color de fondo del navbar */
+        }
+
+      
+
+        /* Estilos para el ícono flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-float i {
+            font-size: 24px;
+        }
+
+        /* Estilos para el footer */
+        footer {
+            background-color: #343a40;
+            color: #ffffff; /* Texto blanco */
+            padding: 20px 0; /* Espaciado interno superior e inferior */
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        /* Estilos para las tarjetas */
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            margin-bottom: 0;
+            font-size: 1.25rem;
+            color: #333; /* Color del título */
+        }
+
+        /* Estilos para el contenido */
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #f8f9fa; /* Color de fondo del cuerpo */
+            color: #333; /* Color del texto */
+        }
+
+        /* Estilos para las columnas en pantallas pequeñas */
+        @media (max-width: 767px) {
+            .col {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo/Moto_Repuestos__5_-removebg-preview.png" alt="Logo" style="height: 70px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-door-fill" style="color: #fff;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index10.html"><i class="bi bi-envelope" style="color: #f8f9fa;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index3.html">Marcas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-cart" style="color: #fff;"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="Repuestos.html">Repuestos</a></li>
+                            <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
+                            <li><a class="dropdown-item" href="electricos.html">Eléctricos</a></li>
+                            <li><a class="dropdown-item" href="suspencion.html">Suspensión</a></li>
+                            <li><a class="dropdown-item" href="transmision.html">Transmisión</a></li>
+                            <li><a class="dropdown-item" href="Llantas.html">Llantas</a></li>
+                            <li><a class="dropdown-item" href="Lubricantes.html">Lubricantes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- <button class="btn btn-outline-light" id="TemaBtn" onclick="toggleMode()">Tema Claro</button> -->
+            </div>
+        </div>
+    </nav>
+   <!-- Tarjetas -->
+   <div class="container mt-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <a href="index7.html" class="col">
+            <div class="card">
+                <img src="Kymco/kymco.png" class="card-img-top" alt="Kymco">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Kymco</h5> -->
+                </div>
+            </div>
+        </a>
+        <a href="index5.html" class="col">
+            <div class="card">
+                <img src="Yamaha/yama2.png" class="card-img-top" alt="Yamaha">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Yamaha</h5> -->
+                </div>
+            </div>
+        </a>
+        <a href="index6.html" class="col">
+            <div class="card">
+                <img src="suzuki/suzuki.png" class="card-img-top" alt="Suzuki">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Suzuki</h5> -->
+                </div>
+            </div>
+        </a>
+        <a href="index8.html" class="col">
+            <div class="card">
+                <img src="tvs/tvs portada.webp" class="card-img-top" alt="TVS">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">TVS</h5> -->
+                </div>
+            </div>
+        </a>
+        <a href="index2.html" class="col">
+            <div class="card">
+                <img src="honda/honda o.png" class="card-img-top" alt="Honda">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Honda</h5> -->
+                </div>
+            </div>
+        </a>
+        <a href="index4.html" class="col">
+            <div class="card">
+                <img src="bajaj/logo baja.jpg" class="card-img-top" alt="Bajaj">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Bajaj</h5> -->
+                </div>
+            </div>
+        </a>
+        <a href="index9.html" class="col">
+            <div class="card">
+                <img src="akt/logo de akt.png" class="card-img-top" alt="AKT">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">AKT</h5> -->
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<br>
+
+    <!-- Ícono flotante de WhatsApp -->
+    <a href="https://wa.me/3207945353" class="whatsapp-float" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 style="color: #ffffff;">Contáctenos</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt" style="color: #25d366;"></i> Dirección: 2a1 Cl. 18
+                            Sahagún, Córdoba</li>
+                        <li><i class="bi bi-phone" style="color: #6c757d;"></i> Teléfono: 3227898709</li>
+                        <a href="index10.html" class="text-decoration-none text-reset"> <li><i class="bi bi-envelope" style="color: #dc3545;"></i> Email: motopremium@gmail.com</li></a>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="color: #ffffff;">Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="bi bi-facebook" style="color: blue;"></i> Facebook</a></li>
+                        <li><a href="#"><i class="bi bi-instagram" style="color:#FF70AB"></i> Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="color:#ffffff;">Acerca de Nosotros</h5>
+                    <p>En Moto Repuestos Premium, nos dedicamos a ofrecer la mejor calidad en repuestos y accesorios para tu motocicleta. Nuestro compromiso es garantizar la satisfacción de nuestros clientes con productos confiables y un servicio excepcional.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Taller de Motos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+         body {
+          padding-top: 100px; /* Altura del navbar */
+          font-family: 'Josefin Sans', sans-serif;
+       }
+
+       .navbar {
+          background-color:#FF0000; /* Color de fondo del navbar */
+       }
+
+       .navbar-brand img {
+          max-height: 80px; /* Altura máxima del logo */
+       }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-float i {
+            font-size: 24px;
+        }
+        footer {
+            background-color: #343a40; /* Fondo negro */
+            color: #ffffff; /* Texto blanco */
+            padding: 20px 0; /* Espaciado interno superior e inferior */
+            font-family: 'Josefin Sans', sans-serif;
+        }
+ /* Estilos para el formulario */
+ form {
+            background-color: #f8f9fa; /* Color de fondo del formulario */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        form textarea {
+            resize: none; /* Evitar que se pueda redimensionar */
+            height: 150px;
+        }
+
+        form button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #dc3545; /* Color de fondo del botón */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #c82333; /* Cambio de color al pasar el cursor */
+        }
+
+        /* Estilos para pantallas pequeñas */
+        @media (max-width: 768px) {
+            form input[type="text"],
+            form input[type="email"],
+            form textarea {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo/Moto_Repuestos__5_-removebg-preview.png" alt="Logo" style="height: 70px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-door-fill" style="color: #fff;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index10.html"><i class="bi bi-envelope" style="color: #f8f9fa;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index3.html">Marcas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-cart" style="color: #fff;"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="Repuestos.html">Repuestos</a></li>
+                            <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
+                            <li><a class="dropdown-item" href="electricos.html">Eléctricos</a></li>
+                            <li><a class="dropdown-item" href="suspencion.html">Suspensión</a></li>
+                            <li><a class="dropdown-item" href="transmision.html">Transmisión</a></li>
+                            <li><a class="dropdown-item" href="Llantas.html">Llantas</a></li>
+                            <li><a class="dropdown-item" href="Lubricantes.html">Lubricantes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- <button class="btn btn-outline-light" id="TemaBtn" onclick="toggleMode()">Tema Claro</button> -->
+            </div>
+        </div>
+    </nav>
+
+   <!-- Sección de Contacto -->
+<div class="container mt-4" id="contacto">
+    <h2 class="text-center" style="color: #dc3545;">Contáctanos</h2>
+    <div class="row">
+        <!-- Columna del formulario de contacto -->
+        <div class="col-md-6">
+            <form action="https://formspree.io/f/xzbnndpy" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" name="name" class="form-control" placeholder="Nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea name="message" class="form-control" placeholder="Mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger">Enviar</button>
+            </form>
+        </div>
+        <!-- Columna del mapa -->
+        <div class="col-md-6">
+            <h5 style="color: #dc3545;">Nuestra Ubicación</h5>
+            <p><i class="bi bi-geo-alt" style="color: #25d366;"></i> Dirección: 2a1 Cl. 18, Sahagún, Córdoba</p>
+            <p><i class="bi bi-phone" style="color: #6c757d;"></i> Teléfono: 3227898709</p>
+            <p><i class="bi bi-envelope" style="color: #dc3545;"></i> Email: motopremium@gmail.com</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15734.72942925869!2d-75.4454997!3d8.9454074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e59624c3079f7b9%3A0x7d64763b2c6f8f2a!2s2a1%20Cl.%2018%2C%20Sahag%C3%BAn%2C%20C%C3%B3rdoba%2C%20Colombia!5e0!3m2!1sen!2sus!4v1687191370935!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Ícono flotante de WhatsApp -->
+    <a href="https://wa.me/3207945353" class="whatsapp-float" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 style="color: #ffffff;">Contactenos</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt" style="color: #25d366;"></i> Dirección: 2a1 Cl. 18, Sahagún, Córdoba</li>
+                        <li><i class="bi bi-phone" style="color: #6c757d;"></i> Teléfono: 3227898709</li>
+                        <a href="index10.html" class="text-decoration-none text-reset"> <li><i class="bi bi-envelope" style="color: #dc3545;"></i> Email: motopremium@gmail.com</li></a>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="color: #ffffff;">Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="bi bi-facebook" style="color: blue;"></i> Facebook</a></li>
+                        <li><a href="#"><i class="bi bi-instagram" style="color:#FF70AB"></i> Instagram</a></li>
+                      
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="color:#ffffff;">Acerca de Nosotros</h5>
+                    <p>En Moto Repuestos Premium, nos dedicamos a ofrecer la mejor calidad en repuestos y accesorios para tu motocicleta. Nuestro compromiso es garantizar la satisfacción de nuestros clientes con productos confiables y un servicio excepcional.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
+
+    
+</body>
+</html>
